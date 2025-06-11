@@ -104,3 +104,4 @@ Dans ton terminal, exécute ces deux commandes dans le dossier du projet :
 
 - docker-compose down
 - docker-compose up --build
+- docker-compose up
