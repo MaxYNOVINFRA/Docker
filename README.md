@@ -15,7 +15,7 @@ Ce dossier contiendra tous les fichiers nécessaires.
 
 1. `app.py`
 
-C'est le fichier principal de ton application Flask.
+C'est le fichier principal de ton application Flask :
 
 from flask import Flask
 app = Flask(__name__)
@@ -36,7 +36,7 @@ flask
 
 # Étape 3 : Créer le Dockerfile
 
-Le Dockerfile décrit comment construire l'image Docker.
+Le Dockerfile décrit comment construire l'image Docker :
 
 FROM python:3.10
 
@@ -51,7 +51,7 @@ CMD ["python", "app.py"]
 
 # Étape 4 : Créer le fichier `docker-compose.yml`
 
-Ce fichier permet de lancer facilement le conteneur.
+Ce fichier permet de lancer facilement le conteneur :
 
 version: '3.8'
 services:
