@@ -94,3 +94,13 @@ docker image rm nom_image
 - Tu l'as lancée avec Docker Compose
 
 Ce projet est une base pour comprendre comment Docker fonctionne avec une app web Python.
+
+
+# Étape 8 : Recharger l'application après une modification
+
+Si tu modifies un fichier (comme `app.py`), tu dois **reconstruire le conteneur Docker** pour que les changements soient pris en compte.
+
+Dans ton terminal, exécute ces deux commandes dans le dossier du projet :
+
+- docker-compose down
+- docker-compose up --build
