@@ -37,3 +37,48 @@ Je crée le fichier de configuration nécessaire pour déployer cAdvisor avec Do
 Je colle le contenu suivant :
 
 Voir le fichier : docker-compose.yml
+
+Ce fichier définit :
+
+- L'image officielle de cAdvisor.
+- L'exposition du service sur le port 8081.
+- Les volumes montés pour accéder aux informations système nécessaires à la collecte des métriques.
+- Le mode de déploiement replicated avec une seule réplique.
+
+# Étape 3 : Déploiement de la stack Docker Swarm
+
+Je déploie la stack nommée monitoring :
+
+`docker stack deploy -c docker-compose.yml monitoring`
+
+Docker va créer un service cadvisor dans la stack monitoring.
+
+# Étape 4 : Vérification du déploiement
+
+Je m'assure que le service est bien lancé avec les commandes suivantes :
+
+`docker stack ls`
+
+`docker stack services monitoring`
+
+`docker stack ps monitoring`
+
+Étape 5 : Accéder à l’interface web de cAdvisor
+
+Je peux accéder à l’interface cAdvisor via mon navigateur à l’adresse suivante :
+
+http://localhost:8081
+
+L’interface affiche :
+
+La liste des conteneurs actifs
+
+L’utilisation CPU et mémoire de chaque conteneur
+
+Les lectures/écritures disque
+
+Les entrées/sorties réseau
+
+Des graphes de performance en temps réel
+
+
