@@ -47,9 +47,16 @@ Je vérifie que la stack est bien en place avec les commandes suivantes :
 
 `docker stack ls`
 
+![image](https://github.com/user-attachments/assets/e097d2e6-2f19-4d3a-8068-48ea7561f3eb)
+
+
 `docker stack services nextcloud`
 
+![image](https://github.com/user-attachments/assets/8919d6d2-f230-444a-b6ed-f80f82380200)
+
 `docker stack ps nextcloud`
+
+![image](https://github.com/user-attachments/assets/cd517083-ba7d-4f59-91c3-32bd892ffdd4)
 
 Je peux maintenant ouvrir un navigateur et accéder à Nextcloud via :
 
