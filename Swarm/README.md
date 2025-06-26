@@ -25,6 +25,7 @@ Docker m’indique que le Swarm est bien initialisé et que je suis maintenant m
 Je crée un dossier pour y mettre mon fichier de configuration :
 
 `mkdir nextcloud-swarm`
+
 `cd nextcloud-swarm`
 
 Puis je crée le fichier :
