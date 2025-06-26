@@ -62,15 +62,25 @@ Je m'assure que le service est bien lancé avec les commandes suivantes :
 
 `docker stack ls`
 
+![image](https://github.com/user-attachments/assets/af13a90d-9091-4e3e-b60e-a68134c874c6)
+
 `docker stack services monitoring`
 
+![image](https://github.com/user-attachments/assets/3d85583a-bf1c-42b7-a7c7-8833ecd3170b)
+
+
 `docker stack ps monitoring`
+
+![image](https://github.com/user-attachments/assets/840a3843-824b-45e7-bd85-7906458b2a68)
 
 Étape 5 : Accéder à l’interface web de cAdvisor
 
 Je peux accéder à l’interface cAdvisor via mon navigateur à l’adresse suivante :
 
 http://localhost:8081
+
+![image](https://github.com/user-attachments/assets/85833c21-811d-416e-8e13-9e7b8aac9df3)
+
 
 L’interface affiche :
 
