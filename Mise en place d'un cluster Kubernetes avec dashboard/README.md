@@ -1,10 +1,10 @@
-Mise en place d'un cluster Kubernetes avec Dashboard
+# Mise en place d'un cluster Kubernetes avec Dashboard
 
-1. Objectif
+# Objectif
 
 Installation d’un cluster Kubernetes local sur un PC Windows, en utilisant Minikube, Docker Desktop, et déploiement d’un service web simple accessible via un navigateur.
 
-2. Préparation de l’environnement
+# Préparation de l’environnement
 
 Vérification de Docker Desktop installé et fonctionnel.
 
@@ -19,7 +19,7 @@ kubectl : pour interagir avec Kubernetes via la ligne de commande
 
 Vérification du bon fonctionnement des outils.
 
-3. Lancement du cluster Kubernetes
+# Lancement du cluster Kubernetes
 
 Démarrage du cluster avec le driver Docker :
 
@@ -29,7 +29,7 @@ Vérification que le nœud est actif :
 
 kubectl get nodes
 
-4. Accès au Dashboard Kubernetes
+# Accès au Dashboard Kubernetes
 
 Lancement de l’interface graphique :
 
@@ -37,7 +37,7 @@ minikube dashboard
 
 Une page web s’ouvre pour visualiser les ressources du cluster (pods, services, déploiements…).
 
-5. Déploiement d’un site web simple (NGINX)
+# Déploiement d’un site web simple (NGINX)
 
 Création du déploiement :
 
@@ -57,7 +57,7 @@ minikube service prod-aix --url
 
 Affichage de la page d’accueil NGINX dans le navigateur.
 
-6. Visualisation dans le Dashboard
+# Visualisation dans le Dashboard
 
 Pod correspondant au déploiement NGINX
 
@@ -65,7 +65,7 @@ Service NodePort exposant le pod
 
 Logs, état de santé, détails du conteneur visibles
 
-7. Résultat
+# Résultat
 
 Un cluster Kubernetes local fonctionnel, un service web accessible et visualisable via le Dashboard.
 
