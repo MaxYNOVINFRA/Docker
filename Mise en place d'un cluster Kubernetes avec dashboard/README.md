@@ -38,6 +38,8 @@ Lancement de l’interface graphique :
 
 Une page web s’ouvre pour visualiser les ressources du cluster (pods, services, déploiements…).
 
+![image](https://github.com/user-attachments/assets/38f22c61-358e-4774-bdca-2014701f1688)
+
 # Déploiement d’un site web simple (NGINX)
 
 Création du déploiement :
