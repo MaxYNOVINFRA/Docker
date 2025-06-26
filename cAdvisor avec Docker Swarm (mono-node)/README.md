@@ -95,3 +95,6 @@ Les entrées/sorties réseau
 Des graphes de performance en temps réel
 
 
+![image](https://github.com/user-attachments/assets/fc18adf9-6806-4e13-b16d-dc09f74069cd)
+![image](https://github.com/user-attachments/assets/7f168dc3-7d2f-415a-8cd3-d985b15f8e7f)
+
