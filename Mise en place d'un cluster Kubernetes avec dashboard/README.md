@@ -10,8 +10,8 @@ Vérification de Docker Desktop installé et fonctionnel.
 
 Installation des outils via PowerShell :
 
-choco install minikube -y
-choco install kubernetes-cli -y
+'choco install minikube -y'
+'choco install kubernetes-cli -y'
 
 Minikube : pour créer un cluster Kubernetes local
 
