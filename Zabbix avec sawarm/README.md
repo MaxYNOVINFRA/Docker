@@ -86,7 +86,7 @@ Ajouter des options de configuration à MySQL (--character-set-server=utf8 --col
 
 - Erreur 3 : "the 'users' table is empty"
 
-- Cause : Le conteneur zabbix-server détecte que la base est vide, mais ne lance pas l’initialisation des tables.
+Cause : Le conteneur zabbix-server détecte que la base est vide, mais ne lance pas l’initialisation des tables.
 
 Solution :
 
