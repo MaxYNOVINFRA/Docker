@@ -77,6 +77,22 @@ Je vais créer un nouveau fichier pour déployer Portainer dans une stack sépar
 
 Voir le fichier Docker-compose-portainer.yml
 
+# Étape 6 : Déploiement de la stack Portainer
+
+Je déploie maintenant Portainer dans une stack dédiée nommée portainer :
+
+`docker stack deploy -c docker-compose-portainer.yml portainer`
+
+Accès à l’interface
+
+Une fois le service lancé, je peux accéder à l’interface de Portainer dans mon navigateur à l’adresse suivante :
+
+http://localhost:9000
+
+Je configure ensuite un utilisateur administrateur et je choisis de gérer l’environnement Docker local.
+
+
+
 
 
 
