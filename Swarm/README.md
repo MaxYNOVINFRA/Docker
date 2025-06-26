@@ -64,6 +64,8 @@ http://localhost:8080
 
 Je devrais voir l’interface de configuration de Nextcloud.
 
+![image](https://github.com/user-attachments/assets/77635a0e-1500-4cf4-ac99-6ceae156062d)
+
 # Étape 5 : Nettoyage (optionnel)
 
 Si je souhaite supprimer la stack :
