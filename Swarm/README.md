@@ -93,6 +93,8 @@ http://localhost:9000
 
 Je configure ensuite un utilisateur administrateur et je choisis de gérer l’environnement Docker local.
 
+![image](https://github.com/user-attachments/assets/a4e90537-3933-4ff9-9eb3-22fcdbe4ceae)
+
 
 
 
