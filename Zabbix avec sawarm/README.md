@@ -31,3 +31,35 @@ Si Swarm n’est pas encore activé, je le fais avec :
 
 Je colle le contenu suivant :
 Voir fichier docker-compose.yml
+
+Ce fichier définit :
+
+- Une base de données MySQL
+- Un serveur Zabbix
+- Une interface web Zabbix (port 8082)
+
+# Étape 3 : Déploiement de la stack
+
+`docker stack deploy -c docker-compose.yml zabbix`
+
+Je vérifie ensuite que tout est bien lancé :
+
+`docker stack ls`
+
+`docker stack services zabbix`
+
+`docker stack ps zabbix`
+
+# Étape 4 : Accès à l’interface Web
+
+Je me rends sur l’URL suivante :
+
+http://localhost:8082
+
+Identifiants par défaut :
+
+Login : Admin
+
+Mot de passe : zabbix
+
+Je configure ensuite les paramètres selon mes besoins (agents, hôtes, templates, etc.).
