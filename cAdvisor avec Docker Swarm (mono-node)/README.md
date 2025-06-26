@@ -53,6 +53,9 @@ Je déploie la stack nommée monitoring :
 
 Docker va créer un service cadvisor dans la stack monitoring.
 
+![image](https://github.com/user-attachments/assets/5809434d-fa88-474e-ba06-d52965309daf)
+
+
 # Étape 4 : Vérification du déploiement
 
 Je m'assure que le service est bien lancé avec les commandes suivantes :
