@@ -11,6 +11,7 @@ Vérification de Docker Desktop installé et fonctionnel.
 Installation des outils via PowerShell :
 
 `choco install minikube -y`
+
 `choco install kubernetes-cli -y`
 
 Minikube : pour créer un cluster Kubernetes local
@@ -23,17 +24,17 @@ Vérification du bon fonctionnement des outils.
 
 Démarrage du cluster avec le driver Docker :
 
-minikube start --driver=docker
+`minikube start --driver=docker`
 
 Vérification que le nœud est actif :
 
-kubectl get nodes
+`kubectl get nodes`
 
 # Accès au Dashboard Kubernetes
 
 Lancement de l’interface graphique :
 
-minikube dashboard
+`minikube dashboard`
 
 Une page web s’ouvre pour visualiser les ressources du cluster (pods, services, déploiements…).
 
@@ -41,19 +42,19 @@ Une page web s’ouvre pour visualiser les ressources du cluster (pods, services
 
 Création du déploiement :
 
-kubectl create deployment prod-aix --image=nginx
+`kubectl create deployment prod-aix --image=nginx`
 
 Vérification du pod :
 
-kubectl get pods
+`kubectl get pods`
 
 Exposition du service via NodePort :
 
-kubectl expose deployment mon-site --type=NodePort --port=80
+`kubectl expose deployment mon-site --type=NodePort --port=80`
 
 Récupération de l’URL d’accès :
 
-minikube service prod-aix --url
+`minikube service prod-aix --url`
 
 Affichage de la page d’accueil NGINX dans le navigateur.
 
