@@ -16,7 +16,7 @@ Je vérifie que Docker est bien installé avec :
 
 Je commence par initialiser Docker Swarm en tant que node manager (mono-node) :
 
-docker swarm init
+`docker swarm init`
 
 Docker m’indique que le Swarm est bien initialisé et que je suis maintenant manager du cluster.
 
