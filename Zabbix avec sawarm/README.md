@@ -60,6 +60,9 @@ Au cours du déploiement de Zabbix, j’ai rencontré plusieurs erreurs que j’
 
 - Erreur 1 : "Unable to select configuration"
 
+![image](https://github.com/user-attachments/assets/7dc602a0-54b1-45a1-a432-3d94d14f1986)
+
+
 Cause : La base de données MySQL était accessible, mais les tables nécessaires n’étaient pas encore initialisées ou Zabbix ne parvenait pas à y accéder correctement.
 
 Solution :
@@ -73,6 +76,9 @@ S’assurer que le conteneur zabbix-server a le temps d’attendre que MySQL soi
 
 
 - Erreur 2 : "the table 'dbversion' was not found"
+
+![image](https://github.com/user-attachments/assets/e76a5f0e-90af-4ece-ae11-763440040b81)
+
 
 Cause : La base zabbix existait, mais les tables n’avaient pas été créées automatiquement.
 
