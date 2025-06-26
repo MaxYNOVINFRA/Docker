@@ -95,6 +95,11 @@ Je configure ensuite un utilisateur administrateur et je choisis de gérer l’e
 
 ![image](https://github.com/user-attachments/assets/a4e90537-3933-4ff9-9eb3-22fcdbe4ceae)
 
+On peut visualiser Nextcloud sur Portainer dans les stacks : 
+
+![image](https://github.com/user-attachments/assets/0a863503-709a-4ba0-90f6-0f05d9be6ffb)
+
+
 
 
 
