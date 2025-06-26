@@ -83,6 +83,8 @@ Je déploie maintenant Portainer dans une stack dédiée nommée portainer :
 
 `docker stack deploy -c docker-compose-portainer.yml portainer`
 
+![image](https://github.com/user-attachments/assets/7c2fd3db-8f5f-47e5-bd7f-df6705661948)
+
 Accès à l’interface
 
 Une fois le service lancé, je peux accéder à l’interface de Portainer dans mon navigateur à l’adresse suivante :
