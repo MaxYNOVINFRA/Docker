@@ -54,11 +54,18 @@ Exposition du service via NodePort :
 
 `kubectl expose deployment mon-site --type=NodePort --port=80`
 
+![image](https://github.com/user-attachments/assets/32e526ac-bbb3-41cc-b931-4069287fda7d)
+
+![image](https://github.com/user-attachments/assets/ad2615f0-74d5-443a-a3e2-bf520ce27c35)
+
+
 Récupération de l’URL d’accès :
 
 `minikube service prod-aix --url`
 
 Affichage de la page d’accueil NGINX dans le navigateur.
+
+![image](https://github.com/user-attachments/assets/6b2b79c9-ec9f-41ea-9fb6-84cf147ac1ba)
 
 # Visualisation dans le Dashboard
 
