@@ -29,4 +29,41 @@ Je crée un dossier pour y mettre mon fichier de configuration :
 `cd nextcloud-swarm`
 
 Puis je crée le fichier :
+
 Voir le fichier Docker-compose.yml
+
+# Étape 3 : Déploiement de la stack
+
+Je lance la stack Swarm en me plaçant dans le dossier contenant le fichier docker-compose.yml :
+
+`docker stack deploy -c docker-compose.yml nextcloud`
+
+![image](https://github.com/user-attachments/assets/1f62dce5-ef3a-465f-90cd-ac18fe10f984)
+
+
+# Étape 4 : Vérification du déploiement
+
+Je vérifie que la stack est bien en place avec les commandes suivantes :
+
+`docker stack ls`
+
+`docker stack services nextcloud`
+
+`docker stack ps nextcloud`
+
+Je peux maintenant ouvrir un navigateur et accéder à Nextcloud via :
+
+http://localhost:8080
+
+Je devrais voir l’interface de configuration de Nextcloud.
+
+# Étape 5 : Nettoyage (optionnel)
+
+Si je souhaite supprimer la stack :
+
+
+
+
+
+
+
