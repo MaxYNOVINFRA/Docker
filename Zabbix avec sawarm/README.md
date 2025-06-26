@@ -42,6 +42,9 @@ Ce fichier définit :
 
 `docker stack deploy -c docker-compose.yml zabbix`
 
+![image](https://github.com/user-attachments/assets/9726caa2-0922-4187-aef3-29741fc0b291)
+
+
 Je vérifie ensuite que tout est bien lancé :
 
 `docker stack ls`
@@ -51,16 +54,11 @@ Je vérifie ensuite que tout est bien lancé :
 `docker stack ps zabbix`
 
 
-
-
-
-
-
 # Étape 4 : Erreurs rencontrées
 
 Au cours du déploiement de Zabbix, j’ai rencontré plusieurs erreurs que j’ai dû corriger. Voici un récapitulatif des problèmes rencontrés, des messages d’erreurs affichés et des solutions apportées.
 
-1. Erreur 1 : "Unable to select configuration"
+- Erreur 1 : "Unable to select configuration"
 
 Cause : La base de données MySQL était accessible, mais les tables nécessaires n’étaient pas encore initialisées ou Zabbix ne parvenait pas à y accéder correctement.
 
@@ -72,6 +70,8 @@ Supprimer la stack et le volume zabbix_zabbix_mysql, puis redéployer.
 
 S’assurer que le conteneur zabbix-server a le temps d’attendre que MySQL soit prêt (update_config.delay).
 
+
+
 - Erreur 2 : "the table 'dbversion' was not found"
 
 Cause : La base zabbix existait, mais les tables n’avaient pas été créées automatiquement.
@@ -81,6 +81,8 @@ Solution :
 S’assurer que le volume MySQL est bien supprimé avant redéploiement.
 
 Ajouter des options de configuration à MySQL (--character-set-server=utf8 --collation-server=utf8_bin).
+
+
 
 - Erreur 3 : "the 'users' table is empty"
 
@@ -95,8 +97,17 @@ docker service logs zabbix_zabbix-server -f
 Forcer la réinitialisation complète :
 
 `docker stack rm zabbix`
+
+![image](https://github.com/user-attachments/assets/f79ad85c-79f9-4948-a13a-1c85d988adbf)
+
+
 `docker volume rm zabbix_zabbix_mysql`
+
+![image](https://github.com/user-attachments/assets/d4c4a36d-02fc-4b91-8ee0-7e7204a9442a)
+
+
 `docker stack deploy -c docker-compose.yml zabbix`
+
 
 # Résolution finale : Changer le port Web
 
@@ -106,6 +117,9 @@ ports:
   - "8082:8080"
 
 Accès final à l’interface web : http://localhost:8082
+
+![image](https://github.com/user-attachments/assets/f626b56a-8ec6-4155-b93e-41d7f91e8d58)
+
 
 
 
