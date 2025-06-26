@@ -66,9 +66,16 @@ Je devrais voir l’interface de configuration de Nextcloud.
 
 ![image](https://github.com/user-attachments/assets/77635a0e-1500-4cf4-ac99-6ceae156062d)
 
-# Étape 5 : Nettoyage (optionnel)
 
-Si je souhaite supprimer la stack :
+# Étape 5 : Ajout d’un outil de supervision - Portainer
+
+Pour aller plus loin dans la gestion de mes services, je vais également intégrer un outil de supervision : Portainer. Cet outil me permettra de visualiser et d'administrer facilement mes containers, stacks et volumes via une interface web intuitive.
+
+Création du fichier docker-compose-portainer.yml
+
+Je vais créer un nouveau fichier pour déployer Portainer dans une stack séparée :
+
+Voir le fichier Docker-compose-portainer.yml
 
 
 
