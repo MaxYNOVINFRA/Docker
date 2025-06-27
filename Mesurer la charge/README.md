@@ -68,19 +68,11 @@ Cliquer sur Create host.
 
 Renseigner :
 
-Host name : docker-agent
+- Host name : docker-agent
+- Groups : créer ou sélectionner Docker Services.
+- Interfaces ->  Type : Agent / IP : de ton pc windows / Port : 10050
 
-Groups : créer ou sélectionner Docker Services.
-
-Interfaces :
-
-Type : Agent
-
-IP : de ton pc windows
-
-Port : 10050
-
-Sauvegarder.
+Ensuite sauvegarder.
 
 Pourquoi j’utilise l’IP de ma machine Windows et non celle de Docker ?
 
@@ -91,11 +83,7 @@ Le Zabbix Agent tourne dans un conteneur Docker sur ma machine Windows. Docker D
 
 Toujours dans l’hôte docker-agent, aller dans l’onglet Templates.
 
-Cliquer sur Select.
-
-Chercher :
-
-Linux by Zabbix agent
+Chercher : Linux by Zabbix agent
 
 ![image](https://github.com/user-attachments/assets/b2c0fc46-c0fc-44fb-b814-5107ed15daee)
 
