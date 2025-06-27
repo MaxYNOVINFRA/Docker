@@ -46,6 +46,8 @@ http://localhost:8085
 
 # Déployer un conteneur Nginx simple
 
+Nginx est un serveur web léger et rapide. Il sert principalement à publier des sites web statiques, faire du reverse proxy ou gérer la répartition de charge. Ici, il permet simplement de tester l’exposition d’un conteneur web.
+
 Dans Containers, clique sur + Add container.
 
 ![image](https://github.com/user-attachments/assets/6988adea-ea84-451a-8ced-eac73b2cd6a8)
@@ -68,6 +70,8 @@ Accède à Nginx : http://localhost:8086
 
 
 # Déployer Adminer (interface base de données)
+
+Adminer est un outil web qui sert à administrer facilement des bases de données (MySQL, MariaDB, PostgreSQL…). Il offre une interface simple pour exécuter des requêtes, créer des tables et gérer les utilisateurs.
 
 C'est les mêmes procédé que le deployement de Ngix, il vous suffira seulement de modifier les champs suivant : 
 
