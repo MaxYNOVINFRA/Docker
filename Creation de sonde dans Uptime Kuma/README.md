@@ -9,7 +9,7 @@ Je souhaite créer des sondes (moniteurs) dans Uptime Kuma afin de surveiller la
 Je me rends dans mon navigateur à mon adresse : http://localhost:3001
 
 
-# Étape 2 : Créer un nouveau moniteur
+# Étape 2 : Créer un nouveau moniteur (refaire cette etape avec tout les autres sondes ex : zabbix, wordpress, ect...)
 
 Dans la barre de gauche, je clique sur le bouton + New Monitor.
 
@@ -38,6 +38,27 @@ Cliquer sur le nom du moniteur.
 
 Consulter l’historique et les logs des vérifications.
 
+
+# Étape 5 : Ajouter un moniteur de type Ping
+
+Je peux également ajouter une sonde Ping pour vérifier la réponse ICMP de ma machine Docker.
+
+Exemple :
+
+Type : Ping
+
+Friendly Name : Ping Machine Docker
+
+Hostname/IP : 192.168.x.x (l’IP réelle de ma machine)
+
+Cela permet de surveiller la connectivité réseau.
+
+
+
+
+
+
+Avec ces étapes, j’ai créé des sondes Uptime Kuma pour surveiller en temps réel mes services Docker Swarm et être alerté en cas d’indisponibilité.
 
 
 
