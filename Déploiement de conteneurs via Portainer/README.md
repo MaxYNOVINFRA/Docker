@@ -83,3 +83,13 @@ http://localhost:8087
 
 ![image](https://github.com/user-attachments/assets/140beb00-db8e-463a-85ae-02ccff582762)
 
+
+# Vérifier le fonctionnement
+
+Dans Portainer : on va dans Containers.
+
+Et on vérifie que tous les conteneurs ont le statut Running.
+
+![image](https://github.com/user-attachments/assets/739a9d4a-cac4-4ad3-af4a-620256614d12)
+
+Si besoin, on peut cliquer sur les logs.
