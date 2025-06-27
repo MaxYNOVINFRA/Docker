@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  zabbix-agent:
+    image: zabbix/zabbix-agent:alpine-6.0-latest
+    environment:
+      - ZBX_SERVER_HOST=host.docker.internal
+      - ZBX_HOSTNAME=docker-agent
+    volumes:
+      - /:/rootfs:ro
+      - /var/run:/var/run:rw
+      - /sys:/sys:ro
+      - /proc:/proc:ro
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
