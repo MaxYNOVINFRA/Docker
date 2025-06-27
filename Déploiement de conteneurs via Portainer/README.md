@@ -67,3 +67,19 @@ Accède à Nginx : http://localhost:8086
 ![image](https://github.com/user-attachments/assets/35871960-1556-4dda-8714-175d70954b94)
 
 
+# Déployer Adminer (interface base de données)
+
+C'est les mêmes procédé que le deployement de Ngix, il vous suffira seulement de modifier les champs suivant : 
+
+- Nom : adminer
+- Image : adminer:latest
+- Publish port : host: 8087 et container: 8080
+
+Clique sur Deploy the container.
+
+# Accède à Adminer :
+
+http://localhost:8087
+
+![image](https://github.com/user-attachments/assets/140beb00-db8e-463a-85ae-02ccff582762)
+
