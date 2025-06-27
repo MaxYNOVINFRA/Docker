@@ -44,3 +44,26 @@ http://localhost:8085
 
 
 
+# Déployer un conteneur Nginx simple
+
+Dans Containers, clique sur + Add container.
+
+![image](https://github.com/user-attachments/assets/6988adea-ea84-451a-8ced-eac73b2cd6a8)
+
+Nom : nginx-test
+
+Image : nginx:latest
+
+Publish a new network port :
+
+host: 8086 et container: 80
+
+![image](https://github.com/user-attachments/assets/851cf46d-5f90-4402-b33a-624cd2f9a698)
+
+Clique sur Deploy the container pour le deployer.
+
+Accède à Nginx : http://localhost:8086
+
+![image](https://github.com/user-attachments/assets/35871960-1556-4dda-8714-175d70954b94)
+
+
