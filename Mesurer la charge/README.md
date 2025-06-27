@@ -48,11 +48,7 @@ Je vérifie que l’agent est bien lancé :
 
 `docker stack services zabbixagent`
 
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/62427080-513a-4e70-8f5a-b10c4096e0d8)
 
 
 Étape 4 – Créer un hôte docker-agent dans Zabbix
@@ -63,7 +59,12 @@ http://localhost:8090
 
 Aller dans Configuration → Hosts.
 
+![image](https://github.com/user-attachments/assets/3028fcc8-7b98-4dbb-91e2-e6e7507d2e12)
+
+
 Cliquer sur Create host.
+
+![image](https://github.com/user-attachments/assets/7ece0f1b-4629-4d7f-b13f-b1a8226e5f43)
 
 Renseigner :
 
@@ -75,15 +76,18 @@ Interfaces :
 
 Type : Agent
 
-IP : host.docker.internal
+IP : de ton pc windows
 
 Port : 10050
 
 Sauvegarder.
 
-✅ L’hôte est créé.
+Pourquoi j’utilise l’IP de ma machine Windows et non celle de Docker ?
 
-🔗 Étape 5 – Associer un Template pour collecter les métriques
+Le Zabbix Agent tourne dans un conteneur Docker sur ma machine Windows. Docker Desktop expose ce conteneur sur un port (10050) accessible depuis l’extérieur via l’IP de l’hôte Windows. Ainsi, lorsque le serveur Zabbix se connecte à l’Agent, il passe par le réseau de la machine Windows, pas directement par une IP interne Docker. C’est pourquoi je renseigne l’IP locale de mon PC Windows (par exemple 192.168.x.x) dans la configuration de l’hôte Zabbix, pour que la communication fonctionne correctement.
+
+
+# Étape 5 – Associer un Template pour collecter les métriques
 
 Toujours dans l’hôte docker-agent, aller dans l’onglet Templates.
 
@@ -93,21 +97,18 @@ Chercher :
 
 Linux by Zabbix agent
 
-Cliquer sur Add.
+![image](https://github.com/user-attachments/assets/b2c0fc46-c0fc-44fb-b814-5107ed15daee)
 
-Sauvegarder.
+Cela active la collecte automatique de :
 
-✅ Cela active la collecte automatique de :
+- CPU usage
+- Memory usage
+- Disk space
+- Load average
 
-CPU usage
 
-Memory usage
 
-Disk space
-
-Load average
-
-🌐 Étape 6 – Superviser cAdvisor avec un Web Scenario
+# Étape 6 – Superviser cAdvisor avec un Web Scenario
 
 Cette étape permet de vérifier que cAdvisor fonctionne.
 
