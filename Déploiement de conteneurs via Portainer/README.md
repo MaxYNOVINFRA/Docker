@@ -40,4 +40,7 @@ et après quelque seconde on aura accès a notre wordpress le temps que le dépl
 
 http://localhost:8085
 
+![image](https://github.com/user-attachments/assets/63beec18-45d2-4ccb-a122-c3ee523011ae)
+
+
 
