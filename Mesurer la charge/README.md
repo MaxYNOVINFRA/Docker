@@ -154,3 +154,12 @@ Avec ces étapes, j’ai mesuré la charge de mon instance Docker via le Zabbix 
 Cela permet de contrôler la santé du cluster Docker uniquement avec Zabbix, sans outil complémentaire.
 
 
+# Conclusion : 
+
+Concrètement :
+
+- On a mesuré la charge globale de l'instance Docker via le Zabbix Agent.
+- Surveiller la disponibilité de cAdvisor dans Zabbix.
+- Mais on ne récupères pas automatiquement toutes les métriques détaillées par conteneur (ce serait un niveau plus avancé via Prometheus + Zabbix, ou via scripts externes).
+
+
