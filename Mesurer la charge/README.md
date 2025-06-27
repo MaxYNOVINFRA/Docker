@@ -102,7 +102,6 @@ Cette étape permet de vérifier que cAdvisor fonctionne.
 
 🔹Créer un hôte cAdvisor
 
-
 Remplir :
 
 - Host name : cAdvisor
@@ -120,47 +119,38 @@ Remplir :
 
 - Name : cAdvisor HTTP Check
 - Update interval : 60 sec
-- Dans Steps, cliquer Add : Name : Metrics / URL : /metrics / Required status codes : 200
-- Variables : URL (Host) : http://host.docker.internal:8081
+- Dans Steps, cliquer Add : Name : Metrics / URL : http://host.docker.internal:8081/metrics / Required status codes : 200
 
-Sauvegarder.
+Ce scénario vérifie que cAdvisor est bien accessible.
 
-✅ Ce scénario vérifie que cAdvisor est bien accessible.
+![image](https://github.com/user-attachments/assets/55852cb3-3bbb-48ff-8274-1ddd40af979e)
+![image](https://github.com/user-attachments/assets/c6943836-995f-4316-a834-6d57496ad05c)
 
-📊 Étape 7 – Vérifier la collecte des données
 
-Dans l’interface Zabbix :
 
-Aller dans Monitoring → Latest data.
+# Étape 7 – Vérifier la collecte des données
 
-Filtrer par docker-agent.
+Dans l’interface Zabbix : Aller dans Monitoring → Latest data.
 
-Vous devez voir les valeurs de CPU, RAM et disque.
+Filtrer par docker-agent, et on devraitvoir les valeurs de CPU, RAM et disque.
 
-Filtrer par cAdvisor.
+![image](https://github.com/user-attachments/assets/48a563f3-d85b-4432-9fbb-5d8f728b2344)
 
-Vous devez voir le résultat du Web Scenario.
 
-✅ Cela prouve que :
+Filtrer par cAdvisor, et on devrait le résultat du Web Scenario.
 
-La charge de votre instance Docker est supervisée.
+![image](https://github.com/user-attachments/assets/4445cafe-ef35-4221-945a-2f1f2a8dc4bb)
 
-cAdvisor est disponible.
 
-🧹 Étape 8 – Supprimer le Zabbix Agent si besoin
 
-Si vous souhaitez supprimer l’agent :
 
-docker stack rm zabbixagent
+1. La charge de votre instance Docker est supervisée.
 
-Le conteneur sera arrêté.
+2. cAdvisor est disponible.
 
-✅ Conclusion
 
 Avec ces étapes, j’ai mesuré la charge de mon instance Docker via le Zabbix Agent et supervisé la disponibilité de cAdvisor avec un Web Scenario.
 
 Cela permet de contrôler la santé du cluster Docker uniquement avec Zabbix, sans outil complémentaire.
-
-Si je souhaite aller plus loin, je peux intégrer Prometheus ou écrire des scripts personnalisés pour importer les métriques détaillées de cAdvisor.
 
 
