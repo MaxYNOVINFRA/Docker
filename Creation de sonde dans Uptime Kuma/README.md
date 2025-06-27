@@ -1,3 +1,62 @@
+# Création de sondes (moniteurs) dans Uptime Kuma
+
+# Objectif
+
+Je souhaite créer des sondes (moniteurs) dans Uptime Kuma afin de surveiller la disponibilité des services déployés dans mon cluster Docker Swarm, comme Portainer, cAdvisor, WordPress et Adminer.
+
+# Étape 1 : Accéder à l’interface Uptime Kuma
+
+Je me rends dans mon navigateur à mon adresse : http://localhost:3001
+
+
+# Étape 2 : Créer un nouveau moniteur
+
+Dans la barre de gauche, je clique sur le bouton + New Monitor.
+
+![image](https://github.com/user-attachments/assets/fba4088f-dfed-47f7-a0f5-1c4b66984144)
+
+
+Exemple de configuration pour Portainer : 
+
+![image](https://github.com/user-attachments/assets/869b4ae8-a830-4e5d-a33b-ced461fd2c09)
+
+
+# Étape 4 : Vérification des sondes
+
+Après avoir créé les moniteurs :
+
+Chaque service apparaît dans la liste avec son statut en direct (Up/Down).
+
+Uptime Kuma teste automatiquement la disponibilité toutes les 60 secondes.
+
+Si un service est indisponible, le statut devient rouge.
+
+
+Pour vérifier un moniteur :
+
+Cliquer sur le nom du moniteur.
+
+Consulter l’historique et les logs des vérifications.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Problème courant sur Windows et sa solution
 
 1. Problème rencontré
