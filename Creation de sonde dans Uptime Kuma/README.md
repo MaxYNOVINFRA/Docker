@@ -24,20 +24,20 @@ Exemple de configuration pour Portainer :
 
 # Étape 4 : Vérification des sondes
 
-Après avoir créé les moniteurs :
+Après avoir créé les sondes :
 
 Chaque service apparaît dans la liste avec son statut en direct (Up/Down).
 
-Uptime Kuma teste automatiquement la disponibilité toutes les 60 secondes.
+Uptime Kuma teste automatiquement la disponibilité toutes les 60 secondes (selon le parametres que l'on a parametrer).
 
 Si un service est indisponible, le statut devient rouge.
 
 
 Pour vérifier un moniteur :
 
-Cliquer sur le nom du moniteur.
+Cliquer sur le nom du moniteur. Consulter l’historique et les logs des vérifications.
 
-Consulter l’historique et les logs des vérifications.
+![image](https://github.com/user-attachments/assets/b0aec0a2-1a41-47f1-b989-606b3bd93395)
 
 
 # Étape 5 : Ajouter un moniteur de type Ping
