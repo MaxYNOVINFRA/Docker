@@ -100,21 +100,15 @@ Cela active la collecte automatique de :
 
 Cette étape permet de vérifier que cAdvisor fonctionne.
 
-🔹 Créer un hôte cAdvisor
+🔹Créer un hôte cAdvisor
 
-Configuration → Hosts.
-
-Cliquer sur Create host.
 
 Remplir :
 
-Host name : cAdvisor
+- Host name : cAdvisor
+- Group : Docker Services
+- Pas d’interface Agent nécessaire.
 
-Group : Docker Services
-
-Pas d’interface Agent nécessaire.
-
-Sauvegarder.
 
 🔹 Créer le Web Scenario
 
@@ -124,23 +118,10 @@ Cliquer sur Create web scenario.
 
 Remplir :
 
-Name : cAdvisor HTTP Check
-
-Update interval : 60 sec
-
-Dans Steps, cliquer Add :
-
-Name : Metrics
-
-URL : /metrics
-
-Required status codes : 200
-
-Variables :
-
-URL (Host) :
-
-http://host.docker.internal:8081
+- Name : cAdvisor HTTP Check
+- Update interval : 60 sec
+- Dans Steps, cliquer Add : Name : Metrics / URL : /metrics / Required status codes : 200
+- Variables : URL (Host) : http://host.docker.internal:8081
 
 Sauvegarder.
 
