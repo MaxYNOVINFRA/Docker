@@ -4,6 +4,7 @@
 
 Je souhaite créer des sondes (moniteurs) dans Uptime Kuma afin de surveiller la disponibilité des services déployés dans mon cluster Docker Swarm, comme Portainer, cAdvisor, WordPress et Adminer.
 
+
 # Étape 1 : Accéder à l’interface Uptime Kuma
 
 Je me rends dans mon navigateur à mon adresse : http://localhost:3001
@@ -41,41 +42,36 @@ Consulter l’historique et les logs des vérifications.
 
 # Étape 5 : Ajouter un moniteur de type Ping
 
-Je peux également ajouter une sonde Ping pour vérifier la réponse ICMP de ma machine Docker.
+Je souhaite vérifier que ma machine Docker (mon hôte) est joignable en permanence, même si les services web sont arrêtés.
 
-Exemple :
+Pourquoi utiliser une sonde Ping ?
 
-Type : Ping
+Contrairement à une sonde HTTP(s) qui teste un site ou un conteneur sur un port spécifique (ex : 80, 8080, 9000), une sonde de type Ping envoie simplement des paquets ICMP à la machine pour vérifier qu’elle répond. Cela permet de savoir si mon hôte Docker est allumé et connecté au réseau.
 
-Friendly Name : Ping Machine Docker
+Pour créer une sonde Ping :
 
-Hostname/IP : 192.168.x.x (l’IP réelle de ma machine)
+Dans le champ Type, je clique et je sélectionne Ping.
 
-Cela permet de surveiller la connectivité réseau.
-
-
+ATTENTION : Ne pas laisser HTTP(s), sinon Uptime Kuma essaiera de contacter un port web, ce qui donnera l’erreur ECONNREFUSED.
 
 
+Dans Nom convivial, j’écris par exemple : Docker
 
+Dans Hostname/IP, j’ai plusieurs choix : host.docker.internal (fonctionne sur Docker Desktop Windows) ou soit l’IP de ma machine sur le réseau local (par exemple 192.168.X.X)
+
+![image](https://github.com/user-attachments/assets/b6130875-b5b6-4a76-91aa-687f4a49f436)
+
+
+Uptime Kuma va maintenant envoyer un ping régulier pour vérifier si la machine répond. Si la machine s’éteint ou perd le réseau, la sonde passera en rouge
+
+![image](https://github.com/user-attachments/assets/29c8ee85-3f20-4d43-9582-68d5aab91dc0)
+
+
+# Conclusion : 
 
 Avec ces étapes, j’ai créé des sondes Uptime Kuma pour surveiller en temps réel mes services Docker Swarm et être alerté en cas d’indisponibilité.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![image](https://github.com/user-attachments/assets/88c84f9d-db63-4097-bd87-9cbdeac549b0)
 
 
 # Problème courant sur Windows et sa solution
