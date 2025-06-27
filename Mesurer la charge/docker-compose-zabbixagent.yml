@@ -6,11 +6,6 @@ services:
     environment:
       - ZBX_SERVER_HOST=host.docker.internal
       - ZBX_HOSTNAME=docker-agent
-    volumes:
-      - /:/rootfs:ro
-      - /var/run:/var/run:rw
-      - /sys:/sys:ro
-      - /proc:/proc:ro
     deploy:
       replicas: 1
       restart_policy:
