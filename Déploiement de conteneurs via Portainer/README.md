@@ -3,7 +3,7 @@
 # Accéder à l’interface Portainer
 
 Ouvre ton navigateur pour accéder a portainer : 
-Si il n'est pas installer, se rendre au dossier 
+Si il n'est pas installer, se rendre au dossier SWARM
 
 Une fois installer rendez-vous sur sont URL : 
 
