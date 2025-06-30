@@ -98,3 +98,24 @@ Des graphes de performance en temps réel
 ![image](https://github.com/user-attachments/assets/fc18adf9-6806-4e13-b16d-dc09f74069cd)
 ![image](https://github.com/user-attachments/assets/7f168dc3-7d2f-415a-8cd3-d985b15f8e7f)
 
+# Erreur rencontrer
+
+3 jours après l'installation du conteneur Cadvisor, il a cessé de démarrer. L'interface web est devenue inaccessible et l'erreur suivante est survenue :
+
+![image](https://github.com/user-attachments/assets/d44e599a-bbc7-4d00-b11e-8e276d877457)
+
+![image](https://github.com/user-attachments/assets/f2e7cc97-332d-4a67-90f5-99fd46ae671e)
+
+
+La solution consiste simplement à relancer le déploiement à l'aide du fichier docker-compose.yml. 
+
+`docker stack deploy -c docker-compose.yml monitoring`
+
+Après le redéploiement, le conteneur a redémarré correctement et l'accès à l'interface web a été rétabli.
+
+![image](https://github.com/user-attachments/assets/289ff31e-1c10-43dd-a362-35bf17657224)
+
+
+
+
+
